@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 轮播图 -->
+  <swiper class="swiper-img" circular autoplay indicator-dots="{{true}}"	indicator-active-color="#ff0000">
+    <block wx:for="{{homeBanner}}" wx:key="id">
+      <swiper-item>
+        <view class="">
+          <image src="{{item.imgUrl}}" mode="" />
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
