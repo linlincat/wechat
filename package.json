@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/linlincat/wechat#readme",
   "dependencies": {
-    "lin-ui": "^0.9.13"
+    "lin-ui": "^0.9.13",
+    "tdesign-miniprogram": "^1.0.3"
   }
 }

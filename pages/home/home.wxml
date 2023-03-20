@@ -2,7 +2,7 @@
 <view class="container">
   <!-- 轮播图 -->
   <swiper class="swiper-img" circular autoplay indicator-dots="{{true}}"	indicator-active-color="#ff0000">
-    <block wx:for="{{homeBanner}}" wx:key="id">
+    <block wx:for="{{homeBanner}}" wx:key="index">
       <swiper-item>
         <view class="">
           <image src="{{item.imgUrl}}" mode="" />
@@ -10,4 +10,6 @@
       </swiper-item>
     </block>
   </swiper>
+  <!-- 六宫格 -->
+  <m-category-grid grid="{{gridAll}}"></m-category-grid>
 </view>

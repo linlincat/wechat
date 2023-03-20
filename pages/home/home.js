@@ -5,13 +5,15 @@ import { homeBanner, gridAll } from "../../data/home.js"
 
 Page({
   data: {
-   homeBanner: []
+   homeBanner: [],
+   gridAll: []
   },
   
   onLoad() {
     this.setData({
-      homeBanner: homeBanner
+      homeBanner,
+      gridAll
     });
-    console.log(homeBanner)
+    console.log(gridAll)
   }
 })

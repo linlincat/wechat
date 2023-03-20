@@ -1,0 +1,13 @@
+<view class="container">
+  <!-- 自定义组件应该用外部样式类 -->
+  <l-grid>
+    <block wx:for="{{grid}}" wx:key="this">
+      <l-grid-item>
+        <view class="grid-item">
+          <image src="{{item.img}}"></image>
+          <text>{{item.title}}</text>
+        </view>
+      </l-grid-item>
+    </block>
+  </l-grid>
+</view>
