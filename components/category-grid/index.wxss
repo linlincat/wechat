@@ -1,1 +1,25 @@
 /* components/category-grid/index.wxss */
+.container {
+  padding: 0 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-item {
+  padding: 20rpx 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid-item image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+}
+
+.grid-item text {
+  font-size: 24rpx;
+  color: #333333;
+}

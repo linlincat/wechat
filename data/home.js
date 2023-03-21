@@ -25,6 +25,8 @@ let gridAll = [
   {id: 4, title:"毛毛", img:"/pages/image/z08.jpg"},
   {id: 5, title:"猫猫", img:"/pages/image/z09.jpg"},
   {id: 6, title:"辅食", img:"/pages/image/z01.jpg"},
+  {id: 7, title:"辅食", img:"/pages/image/z02.jpg"},
+  {id: 8, title:"辅食", img:"/pages/image/z03.jpg"},
 ]
 
 export { homeBanner, gridAll };

@@ -11,5 +11,5 @@
     </block>
   </swiper>
   <!-- 六宫格 -->
-  <m-category-grid grid="{{gridAll}}"></m-category-grid>
+  <m-category-grid wrap-custom-row-num="row-num" grid="{{gridAll}}"></m-category-grid>
 </view>
