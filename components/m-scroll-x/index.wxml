@@ -1,0 +1,15 @@
+<view class="container">
+  <scroll-view scroll-x>
+    <!-- enable-flex【高度会被撑开】 添加了view class="inner" css 为flex布局 -->
+    <view class="view-scroll">
+      <block wx:for="{{itemList}}" wx:for-index="index" wx:key="index">
+        <view class="view-container">
+          <image class="view-image" src="{{item.img}}" />
+          <text class="view-describe">
+           {{item.title}}
+          </text>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>

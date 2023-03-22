@@ -10,8 +10,10 @@
       </swiper-item>
     </block>
   </swiper>
-  <!-- 六宫格 -->
+  <!-- 宫格组件 - row-num -->
   <m-category-grid wrap-custom-row-num="row-num" grid="{{gridAll}}"></m-category-grid>
-  <!-- 自定义标题 -->
+  <!-- 自定义标题组件 -->
   <m-title class="home-title-box" showArray title="热门推荐" rightText="更多"></m-title>
+  <!-- 横向滚动组件 -->
+  <m-scroll-x itemList="{{gridAll}}"></m-scroll-x>
 </view>
