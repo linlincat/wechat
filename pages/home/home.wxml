@@ -12,4 +12,6 @@
   </swiper>
   <!-- 六宫格 -->
   <m-category-grid wrap-custom-row-num="row-num" grid="{{gridAll}}"></m-category-grid>
+  <!-- 自定义标题 -->
+  <m-title class="home-title-box" showArray title="热门推荐" rightText="更多"></m-title>
 </view>

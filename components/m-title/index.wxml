@@ -1,0 +1,12 @@
+<!-- 
+  title  - 标题住文本
+  rhghtText - 标题又文本
+  showArray - 是否显示右侧箭头
+ -->
+<view class="container">
+  <text class="left-text">{{title}}</text>
+  <view class="right-box">
+    <text class="right-text">{{rightText}}</text>
+    <t-icon wx:if="{{showArray}}" color="#999"  name="chevron-right" size="24rpx" />
+  </view>
+</view>

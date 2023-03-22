@@ -11,3 +11,8 @@ page {
 .row-num {
   width: 25%;
 }
+
+.home-title-box {
+  display: block;
+  margin-top: 10rpx;
+}

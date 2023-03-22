@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20rpx;
+  background-color: #fff;
+}
+
+.container .left-text {
+  font-size: 28rpx;
+  color: #333;
+}
+.container .right-text {
+font-size: 24rpx;
+color: #999999;
+}
+
+.container .right-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+}

@@ -8,6 +8,8 @@
   },
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
-    "m-category-grid": "/components/category-grid/index"
+    "m-category-grid": "/components/category-grid/index",
+    "m-title": "/components/m-title/index",
+    "t-icon": "/miniprogram_npm/tdesign-miniprogram/icon/icon"
   }
 }
