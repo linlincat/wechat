@@ -1,0 +1,92 @@
+.top_navbar .top_pos {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fe5804;
+}
+
+.top_navbar .navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.navbar-fixed .navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 45px;
+  padding: 0 10px 0 10px;
+  box-sizing: border-box;
+  position: relative;
+  /* // background: yellowgreen; */
+}
+
+.navbar-content .top_icon {
+  position: absolute;
+  left: 30rpx;
+  /* // transform: translateX(-50%); */
+  width: 40px;
+  height: 40px;
+  display: block;
+  opacity: 0;
+  border-radius: 50%;
+  /* // background: gray; */
+}
+
+.navbar-content .logo-block {
+  position: relative;
+  background: violet;
+  /* // width: 50px; */
+  height: 40px;
+}
+
+.navbar-content .logo-block .top_icon {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  display: block;
+  opacity: 0;
+  border-radius: 50%;
+  /* // background: gray; */
+}
+
+.navbar-content .nav_input {
+  width: 430px;
+  height: 43px;
+  line-height: 43px;
+  border-radius: 40px;
+  background-color: #fff;
+  position: relative;
+  padding-left: 15px;
+  color: gray;
+}
+
+.navbar-content .nav_input .find-icon {
+  color: gray;
+  padding-right: 10px;
+}
+
+.nav_inp_ac {
+  transition: all ease 0.3s;
+  background-color: #f7f7f7;
+}
+
+.return_icon {
+  width: 54rpx;
+  height: 54rpx;
+  margin-bottom: 4px;
+  display: block;
+  border-radius: 50%;
+}
+
+.return_icon2 {
+  width: 22rpx;
+  height: 38rpx;
+  transform: rotateY(180deg);
+}

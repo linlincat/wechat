@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="top_navbar">
+    <view class='top_pos' style="height: {{totalHeight}}px">{{totalHeight}}</view>
+    <view class="navbar-fixed" style="{{navStyle}}">
+      <view style="height:{{statusBarHeight}}px;'">{{statusBarHeight}}</view>
+      <view class="navbar-content" style="height:{{navBarHeight}}px;width:{{windowWidth}}px;">
+        <image src="https://uviewui.com/common/logo.png" class="top_icon" style="opacity:{{imgOpacity}}"></image>
+        <view :style="'width:'+navInpWid+'px;'" :class="[navOpacity >= 1 ?'nav_input nav_inp_ac':'nav_input']">
+          <t-icon color="#999"  name="search" size="24rpx" />
+          <span>选择商品</span>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -11,6 +11,7 @@
     "m-category-grid": "/components/category-grid/index",
     "m-title": "/components/m-title/index",
     "m-scroll-x": "/components/m-scroll-x/index",
+    "m-nav": "/components/m-nav/index",
     "t-icon": "/miniprogram_npm/tdesign-miniprogram/icon/icon"
   }
 }

@@ -1,7 +1,9 @@
 <!--index.wxml-->
 <view class="container">
+  <!-- 导航 -->
+  <m-nav></m-nav>
   <!-- 轮播图 -->
-  <swiper class="swiper-img" circular autoplay indicator-dots="{{true}}"	indicator-active-color="#ff0000">
+  <swiper  class="swiper-img" circular autoplay indicator-dots="{{true}}"	indicator-active-color="#ff0000">
     <block wx:for="{{homeBanner}}" wx:key="index">
       <swiper-item>
         <view class="">
@@ -16,4 +18,9 @@
   <m-title class="home-title-box" showArray title="热门推荐" rightText="更多"></m-title>
   <!-- 横向滚动组件 -->
   <m-scroll-x itemList="{{gridAll}}"></m-scroll-x>
+  <!-- 瀑布流 -->
+  <m-title class="home-title-box" showArray title="最新推荐" rightText="更多"></m-title>
+  <view style="background: red; height: 600px;">
+    
+  </view>
 </view>
