@@ -9,8 +9,8 @@ Component({
         success: (res) => {
           info = res;
           menuButtonInfo = wx.getMenuButtonBoundingClientRect();
-          // console.log(info, "this is info")
-          // console.log(menuButtonInfo, "this is menuButtonInfo")
+          console.log(info, "this is info");
+          console.log(menuButtonInfo, "this is menuButtonInfo");
           this.setData({
             mbutton: menuButtonInfo,
             minfo: info,
@@ -24,9 +24,9 @@ Component({
               (menuButtonInfo.top - info.statusBarHeight) +
               4,
             windowWidth: menuButtonInfo.left,
-            widRemain: (info.windowWidth / 375) * 88,
-            navInpWid: menuButtonInfo.left - 88,
-            navRemain: info.windowWidth - (info.windowWidth / 375) * 88
+            widRemain: (info.windowWidth / 375) * menuButtonInfo.width+3,
+            navInpWid: menuButtonInfo.left - menuButtonInfo.width+3,
+            navRemain: info.windowWidth - (info.windowWidth / 375) * menuButtonInfo.width+3
           })
           // 触发父级监听事件
           this.triggerEvent('getPlaceHeight', {
@@ -56,20 +56,16 @@ Component({
       const styles = `
       background: rgba(255, 255, 255, ${navOp});
       `;
-      // console.log(navOp, "this is navOp")
-      console.log(navOp, "this is navOp ====")
       this.setData({
         imgOpacity: imgO,
         navStyle: topHeight > 10 ? styles : '',
         navOpacity: navOp,
         navInpWid: navOp > 0 ? mobileTop + this.data.widRemain * navOp : this.data.navRemain,
-        // logo_block_width: this.data.mbutton.left  - this.data.mbutton.left - 98
         navRemain: this.data.windowWidth - this.data.widRemain
       });
       if (topHeight < 20) {
-        console.log(topHeight, "llll")
         this.setData({
-          navInpWid: this.data.navRemain - 5
+          navInpWid: this.data.navRemain
         })
       }
     }

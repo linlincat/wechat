@@ -18,8 +18,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  height: 45px;
-  padding: 0 10px 0 10px;
+  height: 90rpx;
+  padding: 0 20rpx 0 20rpx;
   box-sizing: border-box;
   position: relative;
   /* // background: yellowgreen; */
@@ -29,8 +29,8 @@
   position: absolute;
   left: 30rpx;
   /* // transform: translateX(-50%); */
-  width: 40px;
-  height: 40px;
+  width: 80rpx;
+  height: 80rpx;
   display: block;
   opacity: 0;
   border-radius: 50%;
@@ -41,15 +41,15 @@
   position: relative;
   background: violet;
   /* // width: 50px; */
-  height: 40px;
+  height: 80rpx;
 }
 
 .navbar-content .logo-block .top_icon {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 40px;
-  height: 40px;
+  width: 80rpx;
+  height: 80rpx;
   display: block;
   opacity: 0;
   border-radius: 50%;
@@ -57,19 +57,19 @@
 }
 
 .navbar-content .nav_input {
-  width: 430px;
-  height: 43px;
-  line-height: 43px;
-  border-radius: 40px;
+  width: 860rpx;
+  height: 86rpx;
+  line-height: 86rpx;
+  border-radius: 80rpx;
   background-color: #fff;
   position: relative;
-  padding-left: 15px;
+  padding-left: 30rpx;
   color: gray;
 }
 
 .navbar-content .nav_input .find-icon {
   color: gray;
-  padding-right: 10px;
+  padding-right: 20rpx;
 }
 
 .nav_inp_ac {
@@ -80,7 +80,7 @@
 .return_icon {
   width: 54rpx;
   height: 54rpx;
-  margin-bottom: 4px;
+  margin-bottom: 8rpx;
   display: block;
   border-radius: 50%;
 }

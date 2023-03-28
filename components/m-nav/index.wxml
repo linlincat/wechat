@@ -7,7 +7,7 @@
         <image src="/pages/image/h01.jpg" class="top_icon" style="opacity:{{imgOpacity}}"></image>
         <view style="width:{{navInpWid*2}}rpx;" class="{{navOpacity >= 1 ?'nav_input nav_inp_ac':'nav_input'}}">
           <!-- <t-icon color="#999" name="search" size="24rpx" /> -->
-          <span>请选择{{statusBarHeight}}</span>
+          <span>请选择</span>
         </view>
       </view>
     </view>
