@@ -7,9 +7,10 @@ Component({
       let menuButtonInfo; // 菜单按钮信息
       wx.getSystemInfo({
         success: (res) => {
-          // console.log(res, "this is res data")
           info = res;
           menuButtonInfo = wx.getMenuButtonBoundingClientRect();
+          // console.log(info, "this is info")
+          // console.log(menuButtonInfo, "this is menuButtonInfo")
           this.setData({
             mbutton: menuButtonInfo,
             minfo: info,
@@ -23,13 +24,14 @@ Component({
               (menuButtonInfo.top - info.statusBarHeight) +
               4,
             windowWidth: menuButtonInfo.left,
-            widRemain: (info.windowWidth / 375) * 70,
-            navInpWid: menuButtonInfo.left - 70,
-            logo_block_width: menuButtonInfo.left - 10 - menuButtonInfo.left - 70
-            // navStyle: this.data.navStyle,
-            // imgOpacity: this.data.imgOpacity
+            widRemain: (info.windowWidth / 375) * 88,
+            navInpWid: menuButtonInfo.left - 88,
+            navRemain: info.windowWidth - (info.windowWidth / 375) * 88
           })
-          // this.logo_block_width = this.windowWidth - this.navInpWid - 10;
+          // 触发父级监听事件
+          this.triggerEvent('getPlaceHeight', {
+            statusBarHeight: this.data.totalHeight
+          });
         }
       })
     }
@@ -48,20 +50,28 @@ Component({
       let topHeight = mscrollTop;
       let navOp = 0;
       navOp = topHeight / this.data.totalHeight;
-      let mobileTop = this.data.mbutton.left - (this.data.minfo.windowWidth / 375) * 70;
+      let imgO = navOp <= 1 ? 1 - navOp : 0;
+      let mobileTop = this.data.navRemain;
 
       const styles = `
       background: rgba(255, 255, 255, ${navOp});
       `;
-      // this.navStyle = topHeight > 10 ? styles : '';
-
+      // console.log(navOp, "this is navOp")
+      console.log(navOp, "this is navOp ====")
       this.setData({
-        imgOpacity: navOp <= 1 ? 1 - navOp : 0,
+        imgOpacity: imgO,
         navStyle: topHeight > 10 ? styles : '',
         navOpacity: navOp,
         navInpWid: navOp > 0 ? mobileTop + this.data.widRemain * navOp : this.data.navRemain,
-        logo_block_width: this.data.mbutton.left - 10 - this.data.mbutton.left - 70
+        // logo_block_width: this.data.mbutton.left  - this.data.mbutton.left - 98
+        navRemain: this.data.windowWidth - this.data.widRemain
       });
+      if (topHeight < 20) {
+        console.log(topHeight, "llll")
+        this.setData({
+          navInpWid: this.data.navRemain - 5
+        })
+      }
     }
   },
 
@@ -82,7 +92,7 @@ Component({
     widRemain: '',
     scrollTop: 0,
     imgOpacity: 1,
-    logo_block_width: 0,
+    // logo_block_width: 0,
   },
 
   /**
@@ -90,7 +100,6 @@ Component({
    */
   methods: {
     nav() {
-      console.log("进入nav方法")
       // let info = uni.getSystemInfoSync();
       // console.log(info);
       // let menuButtonInfo = uni.getMenuButtonBoundingClientRect();

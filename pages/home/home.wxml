@@ -1,9 +1,11 @@
 <!--index.wxml-->
 <view class="container">
   <!-- 导航 -->
-  <m-nav mscroll-top="{{scrollTop}}"></m-nav>
-  <!-- 轮播图 style="margin-top: 84px;"  -->
-  <swiper  class="swiper-img" circular autoplay indicator-dots="{{true}}"	indicator-active-color="#ff0000">
+  <m-nav bind:getPlaceHeight="onGetPlaceHeight" mscroll-top="{{scrollTop}}"></m-nav>
+  <!-- 占位符 -->
+  <view style="height: {{placeHeight*2+20}}rpx; background:#fe5804;"> </view>
+  <!-- 轮播图  -->
+  <swiper class="swiper-img" circular autoplay indicator-dots="{{true}}" indicator-active-color="#ff0000">
     <block wx:for="{{homeBanner}}" wx:key="index">
       <swiper-item>
         <view class="">
@@ -21,6 +23,6 @@
   <!-- 瀑布流 -->
   <m-title class="home-title-box" showArray title="最新推荐" rightText="更多"></m-title>
   <view style="background: red; height: 600px;">
-    
+
   </view>
 </view>
