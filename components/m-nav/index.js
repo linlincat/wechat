@@ -7,29 +7,9 @@ Component({
       let menuButtonInfo; // 菜单按钮信息
       wx.getSystemInfo({
         success: (res) => {
+          // console.log(res, "this is res data")
           info = res;
           menuButtonInfo = wx.getMenuButtonBoundingClientRect();
-          console.log(info, "this info")
-          console.log(menuButtonInfo, "this menuButtonInfo");
-
-          // this.statusBarHeight = info.statusBarHeight;
-          // this.windowWidth = info.windowWidth;
-          // this.navBarHeight =
-          //   menuButtonInfo.bottom -
-          //   info.statusBarHeight +
-          //   (menuButtonInfo.top - info.statusBarHeight) +
-          //   4;
-          // this.windowWidth = menuButtonInfo.left;
-          // this.widRemain = (info.windowWidth / 375) * 70;
-          // // this.navInpWid = this.windowWidth - this.widRemain;
-          // this.navInpWid = menuButtonInfo.left - 70;
-          // console.log('navInpWid:...', this.navInpWid);
-          // this.navRemain = this.windowWidth - this.widRemain;
-          // console.log('navRemain:....................', this.navRemain);
-          // this.totalHeight = this.statusBarHeight + this.navBarHeight;
-          // console.log('totalHeight:...', this.totalHeight);
-          console.log(this.navStyle, "llll")
-          console.log(this.data.navStyle, 'llllkjjkj')
           this.setData({
             totalHeight: info.statusBarHeight + menuButtonInfo.bottom -
               info.statusBarHeight +
