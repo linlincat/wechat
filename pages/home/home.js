@@ -6,7 +6,15 @@ import { homeBanner, gridAll } from "../../data/home.js"
 Page({
   data: {
    homeBanner: [],
-   gridAll: []
+   gridAll: [],
+   scrollTop: 0,
+  },
+
+  onPageScroll (e) {
+    this.setData({
+      scrollTop: e.scrollTop
+    })
+    console.log(e,"e ======")
   },
   
   onLoad() {

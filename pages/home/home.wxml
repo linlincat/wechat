@@ -1,8 +1,8 @@
 <!--index.wxml-->
 <view class="container">
   <!-- 导航 -->
-  <m-nav></m-nav>
-  <!-- 轮播图 -->
+  <m-nav mscroll-top="{{scrollTop}}"></m-nav>
+  <!-- 轮播图 style="margin-top: 84px;"  -->
   <swiper  class="swiper-img" circular autoplay indicator-dots="{{true}}"	indicator-active-color="#ff0000">
     <block wx:for="{{homeBanner}}" wx:key="index">
       <swiper-item>
