@@ -5,3 +5,4 @@
 2. 组件引入外部样式 - 如:组件使用 externalClasses: ['wrap-custom-row-num'],
 3. 自定义封装组件 - components中都是自己封装的组件;
 4. 引入tdesign组件库 - 使用它主要是创建项目中推荐,因此使用,目前其实它并不完善没有weui, iview, uni-ui方便;
+5. 父子组件间传值 properties, triggerEvent;
