@@ -14,9 +14,9 @@ Page({
   },
 
   onShareAppMessage: function (res) {
-    if (res.from === 'button') {
-      console.log(res.target)
-    }
+    // if (res.from === 'button') {
+    //   console.log(res.target)
+    // }
     return {
       title: '自定义转发标题',  // 自定义动态标题
       path: '/pages/home/home',  // 自定义动态路径
