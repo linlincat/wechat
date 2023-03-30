@@ -13,6 +13,24 @@ Page({
     placeHeight: 64
   },
 
+  onShareAppMessage: function (res) {
+    if (res.from === 'button') {
+      console.log(res.target)
+    }
+    return {
+      title: '自定义转发标题',  // 自定义动态标题
+      path: '/pages/home/home',  // 自定义动态路径
+      imageUrl: '../image/h01.jpg' // 自定义动态路径
+    }
+  },
+
+  // onShow() {
+  //   wx.showShareMenu({
+  //     withShareTicket: true,
+  //     menus: ['shareAppMessage', 'shareTimeline']
+  //   })
+  // },
+
   onPageScroll(e) {
     this.setData({
       scrollTop: e.scrollTop
@@ -24,7 +42,6 @@ Page({
       homeBanner,
       gridAll
     });
-    // console.log(gridAll)
   },
   onGetPlaceHeight(event) {
     this.setData({
