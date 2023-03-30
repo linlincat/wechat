@@ -4,74 +4,74 @@ Page({
    * 页面的初始数据
    */
   data: {
+    flag: false,
+    stickyProps: {
+      zIndex: 2,
+    },
     tabPanelstyle: 'display:flex; padding: 20rpx; min-height: 100vh',
+    currentIndex: 0,
+    scrollArray: [{
+        scrollTop: 0
+      },
+      {
+        scrollTop: 0
+      },
+      {
+        scrollTop: 0
+      },
+      {
+        scrollTop: 0
+      },
+      {
+        scrollTop: 0
+      },
+      {
+        scrollTop: 0
+      },
+      {
+        scrollTop: 0
+      },
+    ]
+  },
+
+  setCurrentIndex(index) {
+
+    this.data.currentIndex = index;
+    // if(this.data.currentIndex == index) {
+    //   return;
+    // }
+    console.log(this.data.scrollArray, "this.data.scrollArray")
+    const top = this.data.scrollArray[index].scrollTop;
+    this.data.flag = true;
+    console.log(this.data.flag, "改变的时候")
+    console.log(top, "this is top")
+    wx.pageScrollTo({
+      scrollTop: top,
+      duration: 0
+    })
+    setTimeout(() => {
+      this.data.flag = false;
+    }, 300)
   },
 
   onTabsChange(event) {
-    console.log(`Change tab, tab-panel value is ${event.detail.value}.`);
+    this.setCurrentIndex(event.detail.value);
   },
 
-  onTabsClick(event) {
-    console.log(`Click tab, tab-panel value is ${event.detail.value}.`);
-  },
+  // onTabsClick(event) {
+  //   this.data.flag = true;
+  //   // console.log(event.detail.value, "click")
+  //   this.setCurrentIndex(event.detail.value);
+  // },
 
   onStickyScroll(event) {
-    console.log(event.detail, "scroll");
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+    if (event.detail.scrollTop) {
+      console.log(this.data.flag, "this.data.flag")
+      if (this.data.flag) {
+        return;
+      }
+    console.log(this.data.scrollArray,'this.data.scrollArray  scrollllll')
+      this.data.scrollArray[this.data.currentIndex].scrollTop = event.detail.scrollTop.toFixed(2);
+    }
   }
 })

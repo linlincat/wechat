@@ -40,7 +40,7 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    mscrollTop: String | Number
+    mscrollTop: String
   },
   observers: {
     mscrollTop(mscrollTop) {

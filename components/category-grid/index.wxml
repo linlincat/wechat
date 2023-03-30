@@ -3,8 +3,8 @@
   <block wx:for="{{grid}}" wx:key="this">
     <view class="wrap-custom-row-num">
       <view class="grid-item">
-        <image src="{{item.img}}"></image>
-        <text>{{item.title}}</text>
+        <image class="image" src="{{item.img}}"></image>
+        <text class="text">{{item.title}}</text>
       </view>
     </view>
   </block>

@@ -13,13 +13,13 @@
   align-items: center;
 }
 
-.grid-item image {
+.grid-item .image {
   width: 60rpx;
   height: 60rpx;
   border-radius: 30rpx;
 }
 
-.grid-item text {
+.grid-item .text {
   font-size: 24rpx;
   color: #333333;
 }
